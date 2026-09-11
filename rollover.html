@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <title>Slike</title>
+    <link href="rollover.css" rel="stylesheet">
+    <script src="rollover.js"></script>
+</head>
+<body>
+    <h1>Galerija</h1>
+    <div class="galerija">
+        <img id="swapSlika"
+            src="6.jpg"
+            alt="Slika 1"
+            onmouseover="swapSlika()"
+            onmouseout="vratiSliku()">
+        <img src="4.jpg" alt="Slika 2">
+        <img src="5.jpg" alt="Slika 3">
+    </div>
+    <script>
+        function swapSlika() {
+            let slika = document.getElementById("swapSlika");
+            if (slika.src.includes("slika1.jpg")) {
+                slika.src = "6swap.jpg";
+            } else {
+                slika.src = "6.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
